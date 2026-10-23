@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🧠 Memory Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="game">
+    <header class="game-header">
+      <h1>🧠 Memory Game</h1>
+      <div class="stats">
+        <span id="moves">Coups : 0</span>
+        <span id="timer">Temps : 0s</span>
+        <span id="best-score">Meilleur score : —</span>
+      </div>
+      <button id="restart-btn" type="button">🔄 Recommencer</button>
+    </header>
+
+    <section id="board" class="board" aria-label="Plateau de jeu"></section>
+  </main>
+
+  <div id="win-overlay" class="win-overlay hidden">
+    <div class="win-modal">
+      <p class="win-title">🎉 Bravo, partie terminée !</p>
+      <p>
+        Coups : <strong id="final-moves">0</strong> — Temps :
+        <strong id="final-time">0s</strong>
+      </p>
+      <p id="new-best-badge" class="new-best-badge hidden">
+        🏆 Nouveau meilleur score !
+      </p>
+      <button id="play-again-btn" type="button">Rejouer</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
